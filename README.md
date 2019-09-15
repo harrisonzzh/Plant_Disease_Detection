@@ -54,5 +54,45 @@ coreml_model.save(output)
 
 **3. Integrate to your APP**
 
+Open the starter app in Xcode, and drag PlantDisease.mlmodel from Finder into the project’s Project navigator. 
+Select it to see the metadata you added:
+<img src="/reference/add_model_to_App.png" alt="alt text" width="600" height="whatever">
 
+Run predict through CoreML
+```swift
+func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+    // load our CoreML Pokedex model
+    guard let model = try? VNCoreMLModel(for: PlantDisease().model) else { return }
+    
+    // run an inference with CoreML
+    let request = VNCoreMLRequest(model: model) { (finishedRequest, error) in
+        
+        // grab the inference results
+        guard let results = finishedRequest.results as? [VNClassificationObservation] else { return }
+        
+        // grab the highest confidence result
+        guard let Observation = results.first else { return }
+        
+        // create the label text components
+        let predclass = "\(Observation.identifier)"
+        let predconfidence = String(format: "score: %.01f% %%", Observation.confidence * 100)
+        
+        // set the label text
+        DispatchQueue.main.async(execute: {
+            self.label.text = "\(predclass) \n \(predconfidence)"
+        })
+    }
+    
+    // create a Core Video pixel buffer which is an image buffer that holds pixels in main memory
+    // Applications generating frames, compressing or decompressing video, or using Core Image
+    // can all make use of Core Video pixel buffers
+    guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+    
+    // execute the request
+    try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+}
+
+```
+
+Check out more detail in [ViewController.swift](https://github.com/harrisonzzh/Plant_Disease_Detection/blob/master/App/PlantDisease/PlantDisease/ViewController.swift)
 
