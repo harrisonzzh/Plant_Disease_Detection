@@ -57,7 +57,7 @@ coreml_model.save(output)
 Open the starter app in Xcode, and drag PlantDisease.mlmodel from Finder into the project’s Project navigator. 
 Select it to see the metadata you added:
 
-<img src="/reference/add_model_to_App.png" alt="alt text" width="600" height="whatever">
+<img src="/reference/add_model_to_App.png" alt="alt text" width="800" height="whatever">
 
 Run predict through CoreML
 ```swift
