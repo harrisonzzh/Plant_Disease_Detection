@@ -14,6 +14,7 @@
 		84A76D49221A0D0D008409FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A76D47221A0D0D008409FC /* LaunchScreen.storyboard */; };
 		84A76D54221A0D0D008409FC /* PlantDiseaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A76D53221A0D0D008409FC /* PlantDiseaseTests.swift */; };
 		84A76D5F221A0D0D008409FC /* PlantDiseaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A76D5E221A0D0D008409FC /* PlantDiseaseUITests.swift */; };
+		84B7EAC6232EDD04002DA4C5 /* plant_health_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B7EAC5232EDD04002DA4C5 /* plant_health_logo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		84A76D5A221A0D0D008409FC /* PlantDiseaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantDiseaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A76D5E221A0D0D008409FC /* PlantDiseaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDiseaseUITests.swift; sourceTree = "<group>"; };
 		84A76D60221A0D0D008409FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B7EAC5232EDD04002DA4C5 /* plant_health_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plant_health_logo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		84A76D3D221A0D0C008409FC /* PlantDisease */ = {
 			isa = PBXGroup;
 			children = (
+				84B7EAC5232EDD04002DA4C5 /* plant_health_logo.jpg */,
 				840FB5802225023400AA2263 /* PlantDisease.mlmodel */,
 				84A76D3E221A0D0C008409FC /* AppDelegate.swift */,
 				84A76D40221A0D0C008409FC /* ViewController.swift */,
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B7EAC6232EDD04002DA4C5 /* plant_health_logo.jpg in Resources */,
 				84A76D49221A0D0D008409FC /* LaunchScreen.storyboard in Resources */,
 				84A76D46221A0D0D008409FC /* Assets.xcassets in Resources */,
 			);
