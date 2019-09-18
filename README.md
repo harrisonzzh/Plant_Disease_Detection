@@ -15,7 +15,7 @@ Dependencies:
 - CoreML
 
 
-**1. Build and train a CNN model: **
+**1. Build and train a CNN model**
 Checkout more detail in the [Notebook](https://github.com/harrisonzzh/Plant_Disease_Detection/blob/master/plant-disease-detection-using-keras.ipynb).
 
 **2. Convert to a IOS model**
